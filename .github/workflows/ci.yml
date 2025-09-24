@@ -6,6 +6,7 @@ on:
     branches:
       - develop
       - main
+      - win-arm64
     tags:
       - "*"
 
@@ -70,6 +71,8 @@ jobs:
             python-version: "3.10"
           - os: "windows-latest"
             python-version: "3.10"
+          - os: "windows-11-arm"
+            python-version: "3.11" # 3.11 is the earliest arm64 version supported by setup-python
     steps:
       - uses: actions/checkout@v4
         with:
@@ -175,6 +178,7 @@ jobs:
           - macos-13
           - macos-14
           - windows-latest
+          - windows-11-arm
         cibw_archs_linux: ["x86_64"]
         cibw_before_all_linux:
           - >-
