@@ -168,8 +168,8 @@ jobs:
     needs:
       - lint
       - package-checks
-      - test-static
-      - test-dynamic
+      # - test-static
+      # - test-dynamic
       # - test-arch
     strategy:
       matrix:
