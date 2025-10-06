@@ -71,8 +71,8 @@ jobs:
             python-version: "3.10"
           - os: "windows-latest"
             python-version: "3.10"
-          - os: "windows-11-arm"
-            python-version: "3.11" # 3.11 is the earliest arm64 version supported by setup-python
+          # - os: "windows-11-arm"
+          #   python-version: "3.11" # 3.11 is the earliest arm64 version supported by setup-python
     steps:
       - uses: actions/checkout@v4
         with:
