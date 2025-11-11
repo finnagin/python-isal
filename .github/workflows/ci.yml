@@ -95,6 +95,8 @@ jobs:
       - name: Set MSVC developer prompt
         uses: ilammy/msvc-dev-cmd@v1
         if: runner.os == 'Windows'
+        with:
+          arch: ${{ matrix.os == 'windows-11-arm' && 'arm64' || 'x64' }}
       - name: Install nasm (Windows)
         uses: ilammy/setup-nasm@v1
         if: runner.os == 'Windows'
@@ -209,6 +211,8 @@ jobs:
       - name: Set MSVC developer prompt
         uses: ilammy/msvc-dev-cmd@v1
         if: runner.os == 'Windows'
+        with:
+          arch: ${{ matrix.os == 'windows-11-arm' && 'arm64' || 'x64' }}
       - name: Install nasm (Windows)
         uses: ilammy/setup-nasm@v1
         if: runner.os == 'Windows'
